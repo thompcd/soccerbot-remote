@@ -1,0 +1,40 @@
+﻿@page "/remote"
+
+<PageTitle>Remote</PageTitle>
+
+<h1>Remote</h1>
+
+<p role="status">Command count: @currentCount</p>
+
+<div id="btn-container">
+    <button class="btn btn-primary" id="up" @onclick="IncrementCount">Up</button>
+    <button class="btn btn-primary" id="down" @onclick="IncrementCount">Down</button>
+    <button class="btn btn-primary" id="left" @onclick="IncrementCount">Left</button>
+    <button class="btn btn-primary" id="right" @onclick="IncrementCount">Right</button>
+</div>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private void MoveUp()
+    {
+        currentCount++;
+    }
+    private void MoveDown()
+    {
+        currentCount++;
+    }
+    private void MoveLeft()
+    {
+        currentCount++;
+    }
+    private void MoveRight()
+    {
+        currentCount++;
+    }
+}
