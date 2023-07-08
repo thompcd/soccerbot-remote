@@ -1,0 +1,32 @@
+@page "/connections"
+@using Microsoft.Extensions.Logging
+@inject ILogger<Connections> Logger
+
+<PageTitle>Connections</PageTitle>
+
+<EditForm Model="@connectionModel" OnSubmit="@HandleSubmit">
+    <p>
+        <label>
+            Server Name
+            <InputText @bind-Value="connectionModel.ServerUrl" />
+        </label>
+    </p>
+    <p>
+        <label>
+            Port
+            <InputNumber @bind-Value="connectionModel.Port" />
+        </label>
+    </p>
+    <button type="submit">Connect</button>
+</EditForm>
+
+@code {
+    private MqttConnectionModel connectionModel = new();
+
+    private void HandleSubmit()
+    {
+        Logger.LogInformation("HandleSubmit called");
+
+        // Process the form
+    }
+}

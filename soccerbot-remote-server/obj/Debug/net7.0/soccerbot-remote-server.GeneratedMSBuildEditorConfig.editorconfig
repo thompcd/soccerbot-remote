@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/workspaces/soccerbot-remote/soccerbot-remote-server/Pages/Connections.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29ubmVjdGlvbnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/workspaces/soccerbot-remote/soccerbot-remote-server/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 

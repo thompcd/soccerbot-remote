@@ -124,6 +124,43 @@
         }
       },
       {
+        "HashCode": 1151097112,
+        "Kind": "Components.Component",
+        "Name": "soccerbot_remote_server.Pages.Connections",
+        "AssemblyName": "soccerbot-remote-server",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Connections"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "soccerbot_remote_server.Pages.Connections",
+          "Common.TypeNameIdentifier": "Connections",
+          "Common.TypeNamespace": "soccerbot_remote_server.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1428519322,
+        "Kind": "Components.Component",
+        "Name": "soccerbot_remote_server.Pages.Connections",
+        "AssemblyName": "soccerbot-remote-server",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "soccerbot_remote_server.Pages.Connections"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "soccerbot_remote_server.Pages.Connections",
+          "Common.TypeNameIdentifier": "Connections",
+          "Common.TypeNamespace": "soccerbot_remote_server.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
         "HashCode": 713270708,
         "Kind": "Components.Component",
         "Name": "soccerbot_remote_server.App",
@@ -156,43 +193,6 @@
           "Common.TypeName": "soccerbot_remote_server.App",
           "Common.TypeNameIdentifier": "App",
           "Common.TypeNamespace": "soccerbot_remote_server",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -1560908027,
-        "Kind": "Components.Component",
-        "Name": "soccerbot_remote_server.Shared.NavMenu",
-        "AssemblyName": "soccerbot-remote-server",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "soccerbot_remote_server.Shared.NavMenu",
-          "Common.TypeNameIdentifier": "NavMenu",
-          "Common.TypeNamespace": "soccerbot_remote_server.Shared",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": 4624549,
-        "Kind": "Components.Component",
-        "Name": "soccerbot_remote_server.Shared.NavMenu",
-        "AssemblyName": "soccerbot-remote-server",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "soccerbot_remote_server.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "soccerbot_remote_server.Shared.NavMenu",
-          "Common.TypeNameIdentifier": "NavMenu",
-          "Common.TypeNamespace": "soccerbot_remote_server.Shared",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
         }
@@ -360,6 +360,43 @@
           "Components.IsSpecialKind": "Components.ChildContent",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.None"
+        }
+      },
+      {
+        "HashCode": -1560908027,
+        "Kind": "Components.Component",
+        "Name": "soccerbot_remote_server.Shared.NavMenu",
+        "AssemblyName": "soccerbot-remote-server",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "soccerbot_remote_server.Shared.NavMenu",
+          "Common.TypeNameIdentifier": "NavMenu",
+          "Common.TypeNamespace": "soccerbot_remote_server.Shared",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 4624549,
+        "Kind": "Components.Component",
+        "Name": "soccerbot_remote_server.Shared.NavMenu",
+        "AssemblyName": "soccerbot-remote-server",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "soccerbot_remote_server.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "soccerbot_remote_server.Shared.NavMenu",
+          "Common.TypeNameIdentifier": "NavMenu",
+          "Common.TypeNamespace": "soccerbot_remote_server.Shared",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
         }
       },
       {
@@ -18997,6 +19034,11 @@
     {
       "FilePath": "/workspaces/soccerbot-remote/soccerbot-remote-server/Shared/MainLayout.razor",
       "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/workspaces/soccerbot-remote/soccerbot-remote-server/Pages/Connections.razor",
+      "TargetPath": "Pages\\Connections.razor",
       "FileKind": "component"
     },
     {
