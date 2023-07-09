@@ -1,13 +1,26 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using soccerbot_remote_server.Data;
+using MQTTnet;
+using MQTTnet.Client;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
+
+// Setup MQTT
+MqttClientOptions options = new MqttClientOptionsBuilder()
+        .WithTcpServer("broker.hivemq.com", 1883)
+        .Build();
+
+IMqttClient mqttclient = new MqttFactory().CreateMqttClient();
+var connection =  mqttclient.ConnectAsync(options, CancellationToken.None);
+connection.Wait();
+var res = connection.Result;
+builder.Services.AddSingleton<IMqttClient>(mqttclient);
+builder.Services.AddSingleton<MqttClientService>();
 
 var app = builder.Build();
 

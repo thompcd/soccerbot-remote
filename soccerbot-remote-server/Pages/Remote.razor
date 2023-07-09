@@ -1,40 +1,72 @@
-﻿@page "/remote"
+﻿@using System.Text.Json;
+@using Microsoft.Extensions.Logging
+@page "/remote"
+@inject MqttClientService MqttService
+@inject ILogger<Connections> Logger
 
 <PageTitle>Remote</PageTitle>
 
 <h1>Remote</h1>
 
 <p role="status">Command count: @currentCount</p>
-
+<p>Speed</p>
+<input type="range" min="1" max="100" step="1" @bind="@velocity" 
+@oninput="AdjustVelocity"/>
 <div id="btn-container">
-    <button class="btn btn-primary" id="up" @onclick="IncrementCount">Up</button>
-    <button class="btn btn-primary" id="down" @onclick="IncrementCount">Down</button>
-    <button class="btn btn-primary" id="left" @onclick="IncrementCount">Left</button>
-    <button class="btn btn-primary" id="right" @onclick="IncrementCount">Right</button>
+    <button class="btn btn-primary" id="up" @onclick="MoveUp">Up</button>
+    <button class="btn btn-primary" id="down" @onclick="MoveDown">Down</button>
+    <button class="btn btn-primary" id="left" @onclick="MoveLeft">Left</button>
+    <button class="btn btn-primary" id="right" @onclick="MoveRight">Right</button>
 </div>
 
 @code {
     private int currentCount = 0;
+    private int velocity = 50;
 
-    private void IncrementCount()
+    private void AdjustVelocity()
     {
         currentCount++;
+        Logger.LogInformation($"change velocity");
+        MqttService?.Publish("cmd/soccerbot/velocity", velocity.ToString());
     }
-
     private void MoveUp()
     {
         currentCount++;
+        Logger.LogInformation($"move up");
+        var move = new MoveMessage(){
+            Magnitude = 1,
+            Degrees = 0
+        };
+        MqttService?.Publish("cmd/soccerbot/move", JsonSerializer.Serialize(move));
     }
     private void MoveDown()
     {
         currentCount++;
+        Logger.LogInformation("move down");
+        var move = new MoveMessage(){
+            Magnitude = 1,
+            Degrees = 180
+        };
+        MqttService?.Publish("cmd/soccerbot/move", JsonSerializer.Serialize(move));
     }
     private void MoveLeft()
     {
         currentCount++;
+        Logger.LogInformation("move left");
+        var move = new MoveMessage(){
+            Magnitude = 1,
+            Degrees = 270
+        };
+        MqttService?.Publish("cmd/soccerbot/move", JsonSerializer.Serialize(move));
     }
     private void MoveRight()
     {
         currentCount++;
+        Logger.LogInformation("move right");
+        var move = new MoveMessage(){
+            Magnitude = 1,
+            Degrees = 90
+        };
+        MqttService?.Publish("cmd/soccerbot/move", JsonSerializer.Serialize(move));
     }
 }
