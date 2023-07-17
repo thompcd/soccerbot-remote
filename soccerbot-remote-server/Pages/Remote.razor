@@ -33,40 +33,28 @@
     {
         currentCount++;
         Logger.LogInformation($"move up");
-        var move = new MoveMessage(){
-            Magnitude = 1,
-            Degrees = 0
-        };
+        var move = new MoveMessage(0, 1);
         MqttService?.Publish("cmd/soccerbot/move", JsonSerializer.Serialize(move));
     }
     private void MoveDown()
     {
         currentCount++;
         Logger.LogInformation("move down");
-        var move = new MoveMessage(){
-            Magnitude = 1,
-            Degrees = 180
-        };
+        var move = new MoveMessage(180, 1);
         MqttService?.Publish("cmd/soccerbot/move", JsonSerializer.Serialize(move));
     }
     private void MoveLeft()
     {
         currentCount++;
         Logger.LogInformation("move left");
-        var move = new MoveMessage(){
-            Magnitude = 1,
-            Degrees = 270
-        };
+        var move = new MoveMessage(270, 1);
         MqttService?.Publish("cmd/soccerbot/move", JsonSerializer.Serialize(move));
     }
     private void MoveRight()
     {
         currentCount++;
         Logger.LogInformation("move right");
-        var move = new MoveMessage(){
-            Magnitude = 1,
-            Degrees = 90
-        };
+        var move = new MoveMessage(90, 1);
         MqttService?.Publish("cmd/soccerbot/move", JsonSerializer.Serialize(move));
     }
 }
